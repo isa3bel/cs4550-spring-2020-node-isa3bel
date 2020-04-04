@@ -3,7 +3,7 @@ const app = express()
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin",
-      "http://cs4550-isabelb-angular-hw8.herokuapp.com/"); 
+      "https://cs4550-isabelb-angular-hw8.herokuapp.com/"); 
   res.header("Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods",
