@@ -5,3 +5,5 @@ const quizAttempts = mongoose.Schema({
    quiz: {type: mongoose.Schema.Types.ObjectId, ref: 'QuizzesModel'},
    answers: [questionSchema]
 })
+
+module.exports = quizAttempts

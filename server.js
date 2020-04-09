@@ -20,6 +20,9 @@ app.use(function(req, res, next) {
 require('./controllers/quizzes.controller.server')(app)
 require('./controllers/questions.controller.server')(app)
 require('./controllers/quiz-attempts.controller.server')(app)
+require('body-parser')(app)
+
+
 
 app.get('/hello', (req, res) =>
   res.send('hello world'));

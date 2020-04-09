@@ -4,7 +4,6 @@ module.exports = function (app) {
   app.get('/api/quizzes', (req, res) => {
         quizService.findAllQuizzes()
             .then(allQuizzes => res.send(allQuizzes))
-        // quizService.findAllQuizzes()
   })
 
   app.get("/api/quizzes/:qid", (req, res) =>
