@@ -1,9 +1,13 @@
 const express = require('express')
 const app = express()
 
+const mongoose = require('mongoose')
+mongoose.connect('mongodb://localhost:27017/whiteboard-cs4550-sp20', 
+{useNewUrlParser: true, useUnifiedTopology: true})
+
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin",
-      "https://cs4550-isabelb-angular-hw8.herokuapp.com"); 
+      "http://localhost:4200"); 
   res.header("Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods",
@@ -12,8 +16,13 @@ app.use(function(req, res, next) {
   next();
 });
 
+
 require('./controllers/quizzes.controller.server')(app)
 require('./controllers/questions.controller.server')(app)
+require('./controllers/quiz-attempts.controller.server')(app)
+require('body-parser')(app)
+
+
 
 app.get('/hello', (req, res) =>
   res.send('hello world'));
