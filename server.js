@@ -2,12 +2,12 @@ const express = require('express')
 const app = express()
 
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/whiteboard-cs4550-sp20', 
+mongoose.connect('mongodb://heroku_7r7qnwb9:fldkfkq0eo3hc66i6s8j81stm5@ds215089.mlab.com:15089/heroku_7r7qnwb9', 
 {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin",
-      "http://localhost:4200"); 
+      "https://cs4550-isabel-b-hw9-angular.herokuapp.com/"); 
   res.header("Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods",
