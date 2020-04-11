@@ -8,7 +8,7 @@ module.exports = function(app) {
   })
 
   app.get('/api/questions', (req, res) => 
-    questionsService.findAllQuestions().then(allQuestions => res.json(allQuestions)))
+    questionsService.findAllQuestions().then(allQuestions => res.send(allQuestions)))
     
 
   app.get('/api/questions/:id', (req, res) => 
