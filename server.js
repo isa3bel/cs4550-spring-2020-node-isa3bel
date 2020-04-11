@@ -7,7 +7,7 @@ mongoose.connect('mongodb://heroku_7r7qnwb9:fldkfkq0eo3hc66i6s8j81stm5@ds215089.
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin",
-      "https://cs4550-isabel-b-hw9-angular.herokuapp.com"); 
+      "*"); 
   res.header("Access-Control-Allow-Headers",
       "Origin, X-Requested-With, Content-Type, Accept");
   res.header("Access-Control-Allow-Methods",
